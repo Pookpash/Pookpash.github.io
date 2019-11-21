@@ -1,0 +1,55 @@
+<head>
+  <style> body { margin: 0; } </style>
+
+  <!--<script src="C:/Users/DETWOBB1/Documents/3dg/3d-force-graph-vr.min.js"></script>-->
+  <script src="https://unpkg.com/3d-force-graph-vr@1.29.2/dist/3d-force-graph-vr.min.js"></script>
+</head>
+
+<body>
+  <div id="3d-graph"></div>
+
+  <script>
+    const Graph = ForceGraphVR()
+      (document.getElementById('3d-graph'))
+        .graphData({
+  "nodes": [
+    {"id": "Till", "group": 1, "aw": "was soll man dazu noch sagen"},
+    {"id": "Moritz", "group": 1, "aw": "photoshop pro"},
+    {"id": "Michael", "group": 1, "aw": "Arbeitstier"},
+    {"id": "Anna", "group": 1, "aw": "Arbeitstier"},
+    {"id": "Franziska", "group": 1, "aw": "fleissig"},
+    {"id": "Jannik", "group": 2, "aw": "schlaeft noch"},
+    {"id": "Niels", "group": 2, "aw": "Nerf Gun Pro"},
+    {"id": "Jing", "group": 2, "aw": "Gangnamstyler"},
+    {"id": "Tobias", "group": 2, "aw": "DM"},
+    {"id": "Niko", "group": 3, "aw": "Hinkebein"},
+  ],
+  "links": [
+    {"source": "Michael", "target": "Anna", "value": 10, "ld": "Aufgaben pro Stunde"},
+    {"source": "Michael", "target": "Moritz", "value": 8, "ld": "Aufgaben pro Stunde"},
+    {"source": "Moritz", "target": "Till", "value": 8, "ld": "Aufgaben pro Stunde"},
+    {"source": "Niko", "target": "Franziska", "value": 6, "ld": "Aufgaben pro Stunde"},
+    {"source": "Franziska", "target": "Till", "value": 2, "ld": "Aufgaben pro Stunde"},
+    {"source": "Anna", "target": "Till", "value": 1, "ld": "Aufgaben pro Stunde"},
+    {"source": "Jannik", "target": "Till", "value": 16, "ld": "Aufgaben pro Stunde"},
+	{"source": "Tobias", "target": "Till", "value": 2, "ld": "Aufgaben pro Stunde"},
+	{"source": "Niels", "target": "Till", "value": 3, "ld": "Aufgaben pro Stunde"},
+	{"source": "Jing", "target": "Till", "value": 4, "ld": "Aufgaben pro Stunde"},
+  ]
+})
+		.nodeLabel('id')
+		.nodeDesc('aw')
+        .nodeAutoColorBy('group')
+		.linkLabel("value")
+		.linkDesc("ld")
+        .linkDirectionalParticles("value")
+        .linkDirectionalParticleSpeed(d => d.value * 0.001);
+  </script>
+</body>
+<!--
+.jsonUrl('https://raw.githubusercontent.com/d3/d3-plugins/master/graph/data/miserables.json')
+        .nodeLabel('id')
+        .nodeAutoColorBy('group')
+        .linkDirectionalParticles("value")
+        .linkDirectionalParticleSpeed(d => d.value * 0.001);
+-->
