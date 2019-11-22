@@ -25,10 +25,14 @@
         }))
     }; */
     const gData = {
-      nodes: imgs.map((img, id) => ({ id, img })),
+      nodes: [
+        {"id": 'cat.jpg'},
+        {"id": 'dog.jpg'},
+        {"id": 'mw.png'},
+      ],
       links: [
-      {"source": 'cat.jpg', "target": 'dog.jpg'},
-      {"source": 'mw.png', "target": 'cat.jpg'},
+        {"source": 'cat.jpg', "target": 'dog.jpg'},
+        {"source": 'mw.png', "target": 'cat.jpg'},
       ]
     };
 
