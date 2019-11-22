@@ -26,7 +26,7 @@
     const Graph = ForceGraphVR()
       (document.getElementById('3d-graph'))
       .nodeThreeObject(({ img }) => {
-        const imgTexture = new THREE.TextureLoader().load(`./imgages/${img}`);
+        const imgTexture = new THREE.TextureLoader().load(`./images/${img}`);
         const material = new THREE.SpriteMaterial({ map: imgTexture });
         const sprite = new THREE.Sprite(material);
         sprite.scale.set(12, 12);
