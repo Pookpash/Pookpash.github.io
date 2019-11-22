@@ -12,7 +12,7 @@
   <div id="3d-graph"></div>
 
   <script>
-    const imgs = ['cat.jpg', 'dog.jpg', 'mw.png'];
+    const imgs = ['mw.png', 'm.png', 'Unbenannt.png'];
 
     // Random connected graph
     /*const gData = {
@@ -25,15 +25,10 @@
         }))
     }; */
     const gData = {
-      nodes: [
-        {"id": 0, "img" = 'cat.jpg'},
-        {"id": 1, "img" = 'dog.jpg'},
-        {"id": 2, "img" = 'mw.png'},
-      ],
-      //nodes: imgs.map((img, id) => ({ id, img })),
+      nodes: imgs.map((img, id) => ({ id, img })),
       links: [
         {"source": 0, "target": 1},
-        {"source": 2, "target": 0},
+        {"source": 0, "target": 2},
       ]
     };
 
