@@ -25,12 +25,8 @@
         }))
     }; */
     const gData = {
-      "nodes": [
-        {"3d-graph": 'cat.jpg'},
-        {"3d-graph": 'dog.jpg'},
-        {"3d-graph": 'mw.png'},
-      ],
-      "links": [
+      nodes: imgs.map((img, id) => ({ id, img })),
+      links: [
         {"source": 'cat.jpg', "target": 'dog.jpg'},
         {"source": 'mw.png', "target": 'cat.jpg'},
       ]
