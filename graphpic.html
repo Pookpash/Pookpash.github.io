@@ -1,16 +1,18 @@
 <head>
   <style> body { margin: 0; } </style>
 
-  <!--<script src="C:/Users/DETWOBB1/Documents/3dg/3d-force-graph-vr.min.js"></script>-->
-  <script src="https://unpkg.com/3d-force-graph-vr@1.29.2/dist/3d-force-graph-vr.min.js"></script>
-  <script src="https://unpkg.com/three@0.110.0/build/three.js"></script>
+  <script src="//unpkg.com/three"></script>
+  <script src="//unpkg.com/3d-force-graph-vr"></script>
+  <!--<script src="../../dist/3d-force-graph-vr.js"></script>-->
+
 </head>
 
 <body>
+
   <div id="3d-graph"></div>
-  
-<script>
-  const imgs = ['mw.png', '53197346.PNG'];
+
+  <script>
+    const imgs = ['cat.jpg', 'dog.jpg', 'eagle.jpg', 'elephant.jpg', 'grasshopper.jpg', 'octopus.jpg', 'owl.jpg', 'panda.jpg', 'squirrel.jpg', 'tiger.jpg', 'whale.jpg'];
 
     // Random connected graph
     const gData = {
@@ -26,7 +28,7 @@
     const Graph = ForceGraphVR()
       (document.getElementById('3d-graph'))
       .nodeThreeObject(({ img }) => {
-        const imgTexture = new THREE.TextureLoader().load(`./images/${img}`);
+        const imgTexture = new THREE.TextureLoader().load(`./imgs/${img}`);
         const material = new THREE.SpriteMaterial({ map: imgTexture });
         const sprite = new THREE.Sprite(material);
         sprite.scale.set(12, 12);
@@ -36,11 +38,5 @@
       .graphData(gData);
 
   </script>
+
 </body>
-<!--
-.jsonUrl('https://raw.githubusercontent.com/d3/d3-plugins/master/graph/data/miserables.json')
-        .nodeLabel('id')
-        .nodeAutoColorBy('group')
-        .linkDirectionalParticles("value")
-        .linkDirectionalParticleSpeed(d => d.value * 0.001);
--->
