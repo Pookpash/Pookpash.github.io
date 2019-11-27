@@ -17,11 +17,10 @@
 <body>
 
   <a-scene inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
-environment="{{ environment or 'preset: tron; gridColor: orange; dressing1Amount: 80; dressing1Color: #B55; dressing2: islands; dressing2Amount: 30' }}"
+
     <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4" material="" geometry=""></a-plane>
     <a-sky color="#79bff7" material="" geometry="" scale=""></a-sky>
 
-    <a-mixin id="slice" slice9="color: #050505; src: slice.png; left: 50; right: 52; top: 50; bottom: 52; padding: 0.04"></a-mixin>
     <a-link class="collidable" href="rndwork.html" image="pg.jpg" title="Go to Process Graph" position="0 2 -5" geometry="" material="" link="">
 	<a-entity text="" position="" rotation=""></a-entity>
 	<!--<a-entity geometry="" material="" rotation="" position="" visible=""></a-entity><a-entity geometry="" material="" visible=""></a-entity>-->
@@ -60,13 +59,6 @@ environment="{{ environment or 'preset: tron; gridColor: orange; dressing1Amount
           position="0 5 -7">
           <a-entity mixin="font" text="align: center; value:VR Room; width: 12" position="0 2 0.01"></a-entity>
     </a-entity>
-	  
-	  <a-entity
-          id="instructionText"
-          mixin="slice font"
-          slice9="color: #111; height: 5.5; width: 12.5; padding: 0.3"
-          text="color: #4ef580; width: 12; wrapCount: 35; zOffset: 0.1; value: GUNTERS.\nINSIDE THE OASIS\nLIES HIDDEN AN EGG\nWHOEVER FINDS THE EGG\nWILL INHERIT THE OASIS\nAND HALF A HUNDRED DOLLARS\n~" position="12 10 -9" look-at="0 0 0">
-          </a-entity>
 
   <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="716" style=""></canvas>
   <div class="a-loader-title" style="display: none;">link traversal</div>
