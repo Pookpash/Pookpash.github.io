@@ -38,7 +38,7 @@
       .linkThreeObjectExtend(true)
       .linkThreeObject(link => {
           // extend link with text sprite
-          const sprite = new SpriteText(`${link.value}`);
+          const sprite = new SpriteText(`test`);
           sprite.color = 'lightgrey';
           sprite.textHeight = 1.5;
           return sprite;
@@ -52,6 +52,9 @@
           Object.assign(sprite.position, middlePos);
 
         });
+    // Spread nodes a little wider
+
+    Graph.d3Force('charge').strength(-150);
         
   </script>
 
