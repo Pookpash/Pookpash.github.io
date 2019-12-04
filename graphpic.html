@@ -14,17 +14,6 @@
 
   <script>
     const imgs = ['mw.png', 'm.png', 'Unbenannt.png'];
-
-    // Random connected graph
-    /*const gData = {
-      nodes: imgs.map((img, id) => ({ id, img })),
-      links: [...Array(imgs.length).keys()]
-        .filter(id => id)
-        .map(id => ({
-          source: id,
-          target: Math.round(Math.random() * (id-1))
-        }))
-    }; */
     const gData = {
       nodes: imgs.map((img, id) => ({ id, img })),
       links: [
@@ -53,9 +42,7 @@
           sprite.color = 'lightgrey';
           sprite.textHeight = 1.5;
           return sprite;
-        });
-    /*
-    
+        })
       .linkPositionUpdate((sprite, { start, end }) => {
           const middlePos = Object.assign(...['x', 'y', 'z'].map(c => ({
               [c]: start[c] + (end[c] - start[c]) / 2 // calc middle point
@@ -66,7 +53,6 @@
 
         });
         
-        */
   </script>
 
 </body>
